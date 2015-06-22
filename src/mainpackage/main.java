@@ -1,36 +1,40 @@
 package mainpackage;
 
+
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
 
+import linkedlist.LinkedList;
+import stack.*;
 public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		System.out.println("Hello world!");
-//		
-//		Stack2 s= new Stack2(10);
-//		s.push("10");
-//		s.push("1");
-//		s.push("110");
-//		s.push("110");
-//		s.push("110");
-//		s.push("110");
-//		s.push("110");
-//		s.push("114");
-//		s.push("113");
-//		s.push("112");
-//		s.push("222");
-//		
-//		s.peek();
-//		s.pop();
-//		s.peek();
-//		s.pop();
-//		s.peek();
-//		s.pop();
-//		s.peek();
+		System.out.println("Hello world!");
+		
+		Stack3 s= new Stack3(10);
+		s.push("10");
+		s.push("1");
+		s.push("110");
+		s.push("110");
+		s.push("110");
+		s.push("110");
+		s.push("110");
+		s.push("114");
+		s.push("113");
+		s.push("112");
+		s.push("222");
+		
+		s.peek();
+		s.pop();
+		s.peek();
+		s.pop();
+		s.peek();
+		s.pop();
+		s.peek();
 		
 		LinkedList ll = new LinkedList();
 		

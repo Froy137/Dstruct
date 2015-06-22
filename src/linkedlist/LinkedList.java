@@ -1,4 +1,5 @@
-package mainpackage;
+package linkedlist;
+
 
 public class LinkedList {
 
