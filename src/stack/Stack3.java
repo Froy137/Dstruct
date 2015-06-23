@@ -15,10 +15,10 @@ public class Stack3 {
 	}
 	
 	public void push(String data){
-		if(stackPointer +1 < this.stacksize)
+		if(stackPointer + 1 < this.stacksize)
 		{
-			this.data[stackPointer]=data;
 			stackPointer++;
+			this.data[stackPointer]=data;
 			
 		}
 		else{
