@@ -112,4 +112,74 @@ public class BinaryTree {
 		
 	}
 	
+	
+	public boolean remove(int key){
+		//start at the top of the tree
+		
+		Node focusNode=root;
+		Node parentNode=root;
+		
+		
+		//When searching for a node this will tell us to search to the right or to the left.
+		
+		boolean isItAtLeftChild=true;
+		
+		
+		while(focusNode.key!=key){
+			
+			
+			parentNode=focusNode;
+			
+			if(key<focusNode.key){
+				isItAtLeftChild=true;
+				focusNode=focusNode.leftChild;
+			}else{
+				isItAtLeftChild=false;
+				focusNode=focusNode.rightChild;
+			}
+			
+			//the node wasn't found
+			if(focusNode==null){
+				return false;
+			}
+		}
+		
+		
+		//if the node doesnt have a child ; delete it!
+		
+		if(focusNode.leftChild==null && focusNode.rightChild==null){
+			//if it's root , delete it!
+			if(focusNode==root){
+				root=null;
+			}
+			
+			
+			else if(isItAtLeftChild){
+				parentNode.leftChild=null;
+			}else{
+				parentNode.rightChild=null;
+			}
+		}
+		//if the node has no right child!
+		else if(focusNode.rightChild==null){
+			
+			if(focusNode==root){
+				root=focusNode.leftChild;
+			}
+			
+			//if focus Node was on the left of the parent move the focus node left child up to the parent node;
+			
+			if(isItAtLeftChild){
+				parentNode.leftChild=focusNode.leftChild;
+			}else{
+				parentNode.rightChild=focusNode.leftChild;
+			}
+			
+		}
+	
+		
+		
+		
+	}//end of remove method
+	
 }
